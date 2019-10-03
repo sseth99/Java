@@ -1,0 +1,46 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package university.problem;
+
+/**
+ *
+ * @author student
+ */
+import java.util.Scanner;
+public class batch {
+    Scanner sc = new Scanner(System.in);
+    String bname=null;
+    int numStudent=0;
+    student[] stuArr;
+    public batch(String nm, int n){
+    
+        this.bname=nm;
+        this.numStudent=n;
+        stuArr = new student[n];
+    }
+    void fillBatch()
+    {
+        for(int i=0;i<numStudent;i++){
+            System.out.println("Enter the name and age of student:");
+            String name=sc.next();
+            int age=sc.nextInt();
+            student s=new student(name,age);
+            stuArr[i]=s;
+           
+        }
+        
+        
+}
+   void display(){
+       for(student s:stuArr){
+           System.out.println("Batch NAme: "+this.bname);
+           s.display();
+           
+           
+   }
+   }
+    
+}
