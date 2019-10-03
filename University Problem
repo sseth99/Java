@@ -1,0 +1,25 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package university.problem;
+
+/**
+ *
+ * @author student
+ */
+import java.util.Scanner;
+public class test {
+    public static void main(String[] args){
+        
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter the name of university and no. of depts:");
+       String name = sc.next();
+       int no = sc.nextInt();
+       university u = new university(name,no);
+       u.fillUniv();
+       u.display();
+    }
+    
+}
